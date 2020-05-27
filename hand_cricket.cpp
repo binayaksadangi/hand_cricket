@@ -2,7 +2,7 @@
 #include<cstdlib>
 using namespace std;
 
-int ru,rp,target=0;
+int target=0;
 char your_name[30];
 int bat();
 int ball();
@@ -39,7 +39,7 @@ int main(){
 
         }
         if(uc==1){
-            
+            int ru,rp;
             cout<<your_name<<" choose to bat first \n";
             ru=bat();
             cout<<your_name<<" scored "<<ru<<" runs. \n";
@@ -65,7 +65,7 @@ int main(){
 
         }
         else if(uc==2){
-            
+            int ru,rp;
             cout<<your_name<<" choose to ball first \n";
             rp=ball();
             cout<<"PC scored"<<rp<<" runs \n Now it's "<<your_name<<"'s turn.";
@@ -94,7 +94,7 @@ int main(){
         cout<<"PC won the toss \n";
         cc=((rand()%2)+1);
         if(cc==1){
-            
+            int ru,rp;
             cout<<"PC choose to bat first \n";
             rp=ball();
             cout<<"PC scored "<<rp<<" runs. \n Now it's "<<your_name<<"'s turn! \n";
@@ -118,7 +118,7 @@ int main(){
 
         }
         else if(cc==2){
-            
+            int ru,rp;
             cout<<"PC choose to ball first \n";
             ru=bat();
             cout<<your_name<<" scored "<<ru<<" runs \n Now it's PC's turn! \n";
@@ -234,6 +234,7 @@ int ball(){
             cin>>ui;
             cout<<"PC choose "<<pi<<"\n";
             while(ui<=0 || ui>=7){
+                
                  cout<<"You can't bowl more than 6 runs \n";
                  cout<<"PC-Score: "<<crp<<" \n Enter your choice: in 1 to 6 \n";
                  cin>>ui;
