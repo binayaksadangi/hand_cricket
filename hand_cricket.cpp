@@ -141,7 +141,8 @@ int main(){
 
         }
     
-    }   
+    }  
+    getchar(); 
     return 0;
 }
 int bat(){
@@ -173,7 +174,7 @@ int bat(){
         
     }
     else{
-        while(cru<=target){
+        while(cru<=target && out==0){
            int ui,pi=((rand()%6)+1);
            cout<<your_name<<"-Score: "<<cru<<" \n Enter your choice: in 1 to 6 \n";
            cin>>ui;
@@ -200,7 +201,7 @@ int bat(){
 }
 int ball(){
     int crp=0,out=0;
-    if(target=0){
+    if(target==0){
         while (out==0)
         {
             int ui,pi=((rand()%6)+1);
@@ -227,7 +228,7 @@ int ball(){
 
     }
     else{
-        while (crp<=target)
+        while (crp<=target && out==0)
         {
             int ui,pi=((rand()%6)+1);
             cout<<"PC-Score: "<<crp<<" \n Enter your choice: in 1 to 6 \n";
